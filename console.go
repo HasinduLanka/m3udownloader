@@ -1,4 +1,4 @@
-package main
+package m3udownloader
 
 import (
 	"fmt"

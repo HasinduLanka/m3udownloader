@@ -1,4 +1,4 @@
-package main
+package m3udownloader
 
 import (
 	"errors"
@@ -7,6 +7,8 @@ import (
 	"strconv"
 	"strings"
 )
+
+var wsroot string = "workspace/"
 
 func RunM3U() {
 	println()
