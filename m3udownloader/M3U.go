@@ -11,9 +11,10 @@ import (
 var wsroot string = "workspace/"
 
 func RunM3U() {
-	println()
+	println("------------------------------------")
 	println("M3U Downloader, Decryptor and Merger")
 	println("By github.com/HasinduLanka")
+	println("------------------------------------")
 	println()
 
 	var filename string
