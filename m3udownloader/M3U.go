@@ -12,7 +12,7 @@ var wsroot string = "workspace/"
 
 func RunM3U() {
 	println()
-	println("M3U Downloader")
+	println("M3U Downloader, Decryptor and Merger")
 	println("By github.com/HasinduLanka")
 	println()
 
