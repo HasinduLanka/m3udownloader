@@ -19,6 +19,28 @@ func LoadURI(uri string) ([]byte, error) {
 	}
 }
 
+func AppendFile(filename string, content []byte) {
+	F, err := os.OpenFile(filename, os.O_APPEND|os.O_CREATE|os.O_WRONLY, os.ModePerm)
+	CheckError(err)
+	F.Write(content)
+	F.Close()
+}
+
+func WriteFile(filename string, content []byte) {
+	F, err := os.OpenFile(filename, os.O_CREATE|os.O_WRONLY, os.ModePerm)
+	CheckError(err)
+	F.Write(content)
+	F.Close()
+}
+
+func MakeDir(name string) {
+	os.MkdirAll(name, os.ModePerm)
+}
+
+func DeleteFiles(name string) {
+	os.RemoveAll(name)
+}
+
 func LoadURIToString(uri string) (string, error) {
 	B, err := LoadURI(uri)
 	return string(B), err
